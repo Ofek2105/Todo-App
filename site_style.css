@@ -1,0 +1,168 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.show_positions {
+    display: flexbox;
+    background-color:chartreuse ;
+    padding: 10px black;
+    border: 5px red;
+    margin: 10px;
+    
+}
+
+/* .container {
+    width: 100%;
+    min-height: 100%;
+    background: linear-gradient(red, yellow);
+    padding: 10px;
+} */
+
+
+body {
+    background: linear-gradient(135deg, red, yellow) fixed;
+}
+
+.main_heading {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 8em;
+    background-color: cadetblue ;
+    justify-content: center;
+}
+
+.notes_container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.add_sheet_button {
+    font-size: 2em;
+    border: none;
+    align-self: center;
+
+}
+
+.add_sheet_button:hover {
+    background-color: #555;
+    border-radius: 5em;
+    
+
+}
+
+.subject_tasks {
+    background-color: aliceblue;
+    border-radius: 5%;
+    width: 400px;
+    min-height: 100px;
+    padding: 10px 40px 40px;
+    
+}
+
+.subject_tasks h2 {
+    display: flex;
+    align-items: center;
+
+}
+
+h2.title_icons::before {
+    content: "";
+    margin-right: 1em;
+    height: 1.2em;
+    width: 1.2em;
+    background-size: 1.2em;
+    background-image: url("images/pencil.png");
+}
+
+h2.title_icons::after {
+    content: "";
+    margin-left: 1em;
+    background-image: url("images/note_icon.png");
+    height: 1.2em;
+    width: 1.2em;
+    background-size: 1.2em;
+}
+
+.subject_tasks img {
+    padding-right: 1em;
+    width: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.input_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: lightgray;
+    border-radius: 20px;
+    padding-left: 20px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background:transparent ;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: cyan;
+    font-size: 2em;
+}
+
+
+ul li {
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+    margin: 10px;
+    font-size: 2em;
+
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-left: -40px;
+}
+
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    height: 32px;
+    width: 32px;
+    background-image: url(images/check.png);
+}
+
+ul li span{
+    position: absolute;
+    line-height: 0.65em;
+    text-align: center;
+    right: 0;
+    border-radius: 40px;
+    font-size: 2em;
+
+    
+}
+
+ul li span:hover{
+    background-color: gray;
+}
